@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 16 apr 2024 om 15:33
+-- Gegenereerd op: 16 apr 2024 om 15:52
 -- Serverversie: 10.4.32-MariaDB
 -- PHP-versie: 8.2.12
 
@@ -32,8 +32,8 @@ CREATE TABLE `products` (
   `productID` varchar(50) NOT NULL,
   `title` varchar(25) NOT NULL,
   `artist` varchar(20) NOT NULL,
-  `picture` varchar(255) NOT NULL,
-  `description` text NOT NULL,
+  `picture` varchar(255) NOT NULL DEFAULT 'No image found',
+  `description` text NOT NULL DEFAULT 'No description found',
   `category` varchar(50) NOT NULL,
   `price` decimal(4,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -72,7 +72,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT voor een tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
